@@ -23,11 +23,26 @@
           <input type="password" name="name" placeholder="機種変更コード" minlength="12" maxlength="12" pattern="^[a-zA-Z0-9_@]+$" required/>
         </div>
         <br>
+         <div class="item">
+          <input type="checkbox" id="showPassword"> パスワードを表示
+        </div>
+        <br>
         <div class="button-area">
           <input type="submit" value="ログイン">
         </div>
       </form>
     </div>
+      <script>
+      document.getElementById('showPassword').addEventListener('change', function() {
+        const passwordField = document.getElementById('password');
+        if (this.checked) {
+          passwordField.type = 'text';
+        } else {
+          passwordField.type = 'password';
+        }
+      });
+    </script>
+    
     <script>
       function validateForm(event) {
         const form = document.getElementById('loginForm');
