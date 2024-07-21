@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -27,6 +27,18 @@
           <input type="submit" value="ログイン" onclick="window.open('https://heleamc.github.io/PRO')">
         </div>
     </form>  
+     <script>
+      function validateForm() {
+        const form = document.getElementById('loginForm');
+        if (form.checkValidity()) {
+          window.open('https://heleamc.github.io/PRO');
+          return true; // フォームを送信する
+        } else {
+          form.reportValidity();
+          return false; // フォームの送信を防ぐ
+        }
+      }
+    </script>
   </body>
   <style>
         @keyframes rainbow {
