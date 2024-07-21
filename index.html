@@ -42,21 +42,6 @@
         }
       }
     </script>
-     <script>
-      function validateForm(event) {
-        let isValid = true;
-
-        // ユーザーネームの検証
-        const username = document.getElementById('username');
-        const usernameError = document.getElementById('usernameError');
-        const usernamePattern = /^[a-zA-Z0-9_@]+$/;
-        if (!usernamePattern.test(username.value)) {
-          usernameError.textContent = '半角英数字のみ入力可能です';
-          isValid = false;
-        } else {
-          usernameError.textContent = '';
-        }
-    </script>
   </body>
   <style>
         @keyframes rainbow {
